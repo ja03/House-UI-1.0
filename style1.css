@@ -1,0 +1,107 @@
+.collection-section a#seeMore{
+font-size: 18px;
+text-decoration: none;
+color: #00000094;
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    overflow: hidden;
+    height: 600px;
+    
+}
+
+.long-pic {
+    width: 400px;
+    height: 400px;
+    transition: all 0.5s ease-out;
+    will-change: height;
+}
+
+.short-pic {
+    width: 400px;
+    height: 200px;
+    transition: all 0.5s ease-out;
+    will-change: height;
+}
+.long-pic, .short-pic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    gap: 0;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+.long-pic i, .short-pic i{
+    transition: all .5s ease-in;
+}
+.long-pic::after ,.short-pic::after{
+    content:"SHOPE NOW" ;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(34, 17, 17, 0.5);
+    transition: all .5s ease;
+    color: #fff;
+    opacity: 0;
+}
+
+.short-pic:hover,
+.long-pic:hover {
+    height: 100%;
+    gap: 35px;
+}
+.long-pic:hover i, .short-pic:hover i{
+    rotate: 180deg;
+}
+.long-pic:hover::after, .short-pic:hover::after{
+    opacity: 1;
+}
+
+
+.frame:nth-child(1) .long-pic:nth-child(1) {
+    background-image: url(./media/img-1-part1.svg);
+    background-position: center;
+    background-size: cover;
+}
+
+.frame:nth-child(1) .short-pic:nth-child(2) {
+    background-image: url(./media/img-2-part1.svg);
+    background-size: 200%;
+    background-position: center center;
+}
+
+.frame:nth-child(2) .long-pic:nth-child(2) {
+    background-image: url(./media/img-2-part2.svg);
+    background-position: center;
+}
+
+.frame:nth-child(2) .short-pic:nth-child(1) {
+    background-image: url(./media/img-1-part2.svg);
+    background-position: center;
+    background-size: 200%;
+}
+
+.frame:nth-child(3) .long-pic:nth-child(1) {
+    background-image: url(./media/img-1-part3.svg);
+    background-position: center;
+}
+
+.frame:nth-child(3) .short-pic:nth-child(2) {
+    background-image: url(./media/img-2-part3.svg);
+    background-position: center;
+    background-size: 200%;
+}
